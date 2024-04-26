@@ -13,7 +13,7 @@ const InputDisplay = ({ value = 0.0, symbol = "", onChange }) => {
 	};
 
 	const onValueChange = (e) => {
-		setDisplayValue(applyFloatFormatting(e.target.value));
+		setDisplayValue(applyFloatFormatting(e.target.value || 0));
 		if (onChange && typeof onChange === "function") {
 			onChange(parseInt(e.target.value || 0));
 		}
